@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+
+        //进入页面我们的第一件事情就是检测当前是pc还是phone，然后跳转到不同的项目中
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            //用来判断是否是移动端设备的，条件成立代表的时移动端的设备
+            //window.location.href="移动端的页面";
+            if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                //code.....
+            } else if (/iPad/i.test(navigator.userAgent)) {
+                //code.....
+            }
+                /*
+                //如果pc和移动端使用的是同一套项目，我们需要动态的给移动端增加viewport
+                var oMeta=document.createElement("mea");
+                oMeta.name="viewport";
+                oMeta.content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+                document.head.appendChild(oMeta);
+                */
+
+        } else {
+            //window.location.href="pc端的页面";
+        }
+
+    </script>
+</head>
+<body>
+
+<script type="text/javascript">
+    /*
+     1、H5、css3做我们PC端的开发（会存在兼容性的问题)--"优雅降级"：对于不影响用户使用的我们可以不管；我们也可以用其他的技术来代替；
+
+     2、做移动端开发
+     1）用户通过手机浏览器手动输入网址（扫描二维码）打开我们的页面
+     a、对于相对内容较多而且页面结构复杂的网站，我们一般都会采用pc端一套项目、移动端一套项目（公司有特别的需求，需要我们pad端在做一套）(例如：www.qq.com  www.jd.com )
+     b、对于简单的页面，我们展示的内容不多，排版也比较的简单，我们可以在同一个项目中做响应式开发，来适配不同的尺寸需求（例如： www.huawei.com/cn/）
+
+     响应式布局开发指的是在不同尺寸下，展示不同的样式信息
+
+     2）我们开发的H5页面是嵌入APP中运行的（自己公司的APP、第三方平台:微信）hyBird模式
+       APP的唯一缺点:发布到应用商店的时候（IOS）存在7天的审核周期;用户自主性地选择升级，这样新的内容不能再最短的时间传递给用户;
+       H5的缺点:
+           -->s虽然移动端的浏览器都是webkit内核的，但是存在很多很多的兼容问题;H5不能操作手机内核部固有的组件和功能（例如：H5能不能调取摄像头取决去我们的浏览器是否支持);
+           -->H5使用css3实现的动画效果虽然己经比js实现的要快了，但是相对于APP实现的还差一个量级呢;
+           -->App可以把需要加载的资源和部分文件存储到用户的手机上，但是H5只能请求自己服务器上的资源;.....
+       native.js
+
+       H5调取App中实现的功能和方法，我们通常采取两种解决方案:
+       //ios:伪url传输
+       APP中实现的一个功能:我们想调取这个功能，那么需要我们和APP开发人员协商一个不真实的URL地址（http://test.qq.com/?num=13&callback=fn）
+       //jsBridge.js
+
+       微信JS-SDK说明文档   mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+
+     */
+
+</script>
+
+</body>
+</html>
