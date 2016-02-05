@@ -6,7 +6,7 @@
      一个手指操作的：touch事件模型 touchstart touchmove touchend touchcancel
      多个手指操作的：getsture事件模型
 
-     按下移动的距离低于10培训，我们默认是没有发生移动的；按下后75ms没有离开，也没有发生位移属于长按；
+     按下移动的距离低于10px，我们默认是没有发生移动的；按下后75ms没有离开，也没有发生位移属于长按；
 
      onclick:
      1)触发太敏感了，碰到就触发了
@@ -124,17 +124,6 @@
             this.setAttribute("isM",true);
         }
     }, false);
-
-    oDiv.addEventListener("touchmove", function (e) {
-        var touch = e.touches[0];
-        var cX=touch.clientX;
-        var cY=touch.clientY;
-        var sX=this.getAttribute("sX");
-        var sY=this.getAttribute("sY");
-        if(Math.abs(cX-sY)>10 || Math.abs(cY-sY)>10){
-            this.setAttribute("isM",true);
-        }
-    }, false)
 
     oDiv.addEventListener("touchend", function (e) {
        //测试：
