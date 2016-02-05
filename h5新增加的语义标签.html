@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5</title>
+
+    <script type="text/javascript">
+        /*
+        1、构建页面结构的一些标签:
+        header（页面的头部）、footer（页面底部）、nav（导航）、section（区域）、article（文章）、figure（文章的配图）、figcaption(文章配图下的说明性的文字)、aside(标注)、hgroup(副标题)
+         2、标示文本的语义元素
+         time、mark（这段文字应该突出显示）
+
+        在IE6-8下不兼容，那么我们不需要自己手动的修改一遍，只需要引入一个轻量级的js文件即可:"html5.js"
+         */
+    </script>
+    <!--[if It IE 9]>
+    <script type="text/javascript" src="js/html5.js"></script>
+    <![endif]-->
+    <style type="text/css">
+        body,div,span,p,h2,img{
+            margin: 0;
+            padding: 0;
+            font-family: "\5b8b\4f53", "Arial Narrow";
+            font-size: 20px;
+        }
+        img{
+            border:none;
+        }
+        .article{
+            margin: 10px auto;
+            width: 50%;
+        }
+        .article h2{
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background: #FFF38F;
+        }
+        .article p{
+            margin: 5px 0 5px 0;
+            line-height: 20px;
+        }
+        .article .figure{
+            float: left;
+            margin:15px 15px 15px 0;
+            width: 300px;
+        }
+        .article .figure img{
+            width: 100%;
+        }
+        .article .figure figcaption{
+            margin-top: 5px;
+            margin-left: 20px;
+            font-size: 12px;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+<article class="article">
+    <h2>祝愿大家毕业以后找到好的工作</h2>
+    <p>Right now, you're probably feeling pretty good. After all, life in the developed world is comfortable—probably more comfortable than it's been for the average human being throughout all of recorded history.</p>
+    <figure class="figure">
+        <img src="images/human_skull.jpg"/>
+        <figcaption>Will you be the last person standing if one of these apocalyptic scenarios plays out?</figcaption>
+    </figure>
+    <p>
+        But don't get too smug. There's still plenty of horrific ways it could all fall apart. In this article, you'll learn about a few of our favorites.
+
+        Mayan Doomsday
+        Skeptics suggest that the Mayan calendar simply rolls to a new 5,126-year era after 2012, and doesn't actually predict a life-ending apocalypse. But given that the long-dead Mayans were wrong about virtually everything else, why should we trust them on this?
+
+        Robot Takeover
+        Not quite as frightening as a Vampire Takeover or Living-Dead Takeover, a robot rebellion is still a disquieting thought. We are already outnumbered by our technological gadgets, and even Bill Gates fears the day his Japanese robot slave turns him over by the ankles and asks (in a suitably robotic voice) "Who's your daddy now?"
+    </p>
+</article>
+
+</body>
+</html>
