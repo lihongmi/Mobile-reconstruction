@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        /*
+         传统PC端使用的表单元素
+         <from>
+         <input> type=text/password/radial/checkbox/button/submit/reset/file.....
+         <select></select> 下拉列表
+         <label></label>  文本
+         <textarea></textarea> 文本域
+         </from>
+         H5中对于input表单元素，新增加了一些类型:
+         type=search/url/tel/email/number/range/data/time/color...
+         1)在移动端的开发当中，我们使用H5新增加类型的input,可以调出最符合输入的物理键盘，方便用户输入内容，例如：type="number"，当用户输入的时候会默认的调出数字键盘
+         2)H5新增加的表单元素类型，内置验证方式，不需要手动的进行编写正则验证
+         */
+    </script>
+    <style type="text/css">
+        body,input{
+            margin: 0;
+            padding: 0;
+            font-family: "\5b8b\4f53", "Arial Narrow";
+            font-size: 20px;
+        }
+        input{
+            outline:none;
+        }
+        #txtNum{
+
+            margin: 20px 0 0 20px;
+            width: 100px;
+            height: 30px;
+            box-shadow: 2px 2px 2px 2px lightgrey;
+        }
+        #txtRange{
+            margin: 0 0 0 20px;
+            width: 300px;
+            height: 30px;
+            vertical-align: middle;
+        }
+        input[type='date'],input[type='time'],input[type='text'],input[type='week'],input[type='color']{
+            margin-left: 30px;
+            width: 300px;
+        }
+        <!---->
+        .box{
+            margin:20px auto;
+            width: 500px;
+            font-size: 14px;
+        }
+
+        #userEmail{
+            padding: 5px;
+            width:200px;
+            height: 30px;
+            border: 1px solid #2023ff;
+        }
+        #userEmail.error{
+            border:1px solid #ff3b22;
+        }
+        #spanEmail{
+            display: inline-block;
+            margin-left: 10px;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            color: #00007F;
+        }
+        #spanEmail.error{
+            color: red;
+        }
+    </style>
+    
+</head>
+<body>
+
+    <input id="txtNum" type="number" max="100" min="18" step="q" value="25" disabled="true"/>
+    <input id="txtRange" type="range" max="100" min="18" step="1" value="25">
+<script type="text/javascript">
+    var txtNum=document.querySelector("#txtNum");
+    var txtRange=document.querySelector("#txtRange");
+    txtRange.onchange=function(){
+        txtNum.value=this.value;
+    };
+    //console.dir(txtRange)==>找出属性如ondrag
+    //txtRange.ondrag=function(){
+    //txtRange.onplay=function(){
+    //    txtNum.value=this.value;
+    //};
+</script>
+
+
+<hr/>
+    <input id="text" type="text"/>
+    <input id="date" type="date"/>
+    <input id="time" type="time"/>
+
+<script type="text/javascript">
+    var text=document.querySelector("#text");
+    var date=document.querySelector("#date");
+    var time=document.querySelector("#time");
+    date.onchange=function(){
+        text.value=this.value+"  ";
+    };
+    time.onchange=function(){
+        text.value+=this.value;
+    };
+</script>
+
+
+<hr/>
+<input type="week"/>
+    <hr/>
+<input id="textColor" type="text"/>
+<input id="color" type="color"/>
+<script type="text/javascript">
+    color.onchange=function(){
+        textColor.value=this.value.toUpperCase();
+    }
+</script>
+
+
+    <hr/>
+    <div class="box">
+         <input type="text" id="userEmail" /><span id="spanEmail" >你输入的内容出现错误</span>
+    </div>
+<script type="text/javascript">
+    //onblur:文本框失去焦点事件
+    var userEmail=document.getElementById("userEmail");
+    var spanEmail=document.getElementById("spanEmail");
+    //实现的是当文本框失去焦点的时候做的验证:onblur-->onfocus文本框获取焦点事件
+    userEmail.onblur=function(){
+        var reg=/^[0-9a-zA-Z_.-]+@[0-9a-zA-Z-]+(\.[a-zA-Z]{2,4}){1,2}$/;
+        var val=this.value.replace(/^\s+|\s+$/,"");
+        if(reg.test(val)){
+            this.className=null;
+            spanEmail.className=null;
+            spanEmail.innerHTML="输入正确~";
+        }else{
+            this.className="error";
+            spanEmail.className="error";
+            spanEmail.innerHTML="输入错误~";
+        }
+    }
+</script>
+</body>
+</html>

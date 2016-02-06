@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,input{
+            margin: 0;
+            padding: 0;
+            font-family: "\5b8b\4f53", "Arial Narrow";
+            font-size: 20px;
+        }
+        input{
+            outline:none;
+        }
+        .box{
+            margin:20px auto;
+            width: 500px;
+            font-size: 14px;
+        }
+
+        #userEmail{
+            padding: 5px;
+            width:200px;
+            height: 30px;
+            border: 1px solid #2023ff;
+        }
+        #userEmail.error{
+            border:1px solid #ff3b22;
+        }
+        #spanEmail{
+            display: inline-block;
+            margin-left: 10px;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            color: #00007F;
+        }
+        #spanEmail.error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input type="text" id="userEmail" />
+    <span id="spanEmail" >你输入的内容出现错误</span>
+    <input type="button" value="提交" id="btn">
+</div>
+<script type="text/javascript">
+    //第一种方式:
+    //onblur:文本框失去焦点事件
+    var userEmail=document.getElementById("userEmail");
+    var spanEmail=document.getElementById("spanEmail");
+    var btn=document.getElementById("btn");
+    //实现的是当文本框失去焦点的时候做的验证
+    //onblur文本框失去焦点事件
+    //onfocus文本框获取焦点事件
+    userEmail.onblur=function(){
+        /*
+         var reg=/^[0-9a-zA-Z_.-]+@[0-9a-zA-Z-]+(\.[a-zA-Z]{2,4}){1,2}$/;
+         var val=userEmail.value.replace(/^\s+|\s+$/,"");
+         if(reg.test(val)){
+         userEmail.className=null;
+         spanEmail.className=null;
+         spanEmail.innerHTML="输入正确~";
+         }else{
+         userEmail.className="error";
+         spanEmail.className="error";
+         spanEmail.innerHTML="输入错误~";
+         }
+         */
+        var reg=/^[0-9a-zA-Z_.-]+@[0-9a-zA-Z-]+(\.[a-zA-Z]{2,4}){1,2}$/;
+        var val=this.value.replace(/^\s+|\s+$/,"");
+        if(reg.test(val)){
+            this.className=null;
+            spanEmail.className=null;
+            spanEmail.innerHTML="输入正确~";
+            return true;
+        }
+        this.className="error";
+        spanEmail.className="error";
+        spanEmail.innerHTML="输入错误~";
+        return false;
+    };
+
+    //第二种方式:
+    //添加【提交】按钮
+    //当点击提交按钮的时候做验证:由于之前己经在onblur中设置了一次验证，所以本次只需要执行onblur事件,看一下返回的结果是true还是false即可（需哟我们在onblur事件中增加return）
+    btn.onclick=function(){
+        /*
+        var reg=/^[0-9a-zA-Z_.-]+@[0-9a-zA-Z-]+(\.[a-zA-Z]{2,4}){1,2}$/;
+        var val=userEmail.value.replace(/^\s+|\s+$/,"");
+        if(reg.test(val)){
+            userEmail.className=null;
+            spanEmail.className=null;
+            spanEmail.innerHTML="输入正确~";
+        }else{
+            userEmail.className="error";
+            spanEmail.className="error";
+            spanEmail.innerHTML="输入错误~";
+        }
+        */
+        if(userEmail.onblur()){
+            alert("ok");
+        }
+    };
+
+
+    //第三种方式:
+    //实现的时随着用户的输入，就完成了我们的验证操作
+    //onkeydown-->键盘按下事件
+    //onkeyup-->键盘抬起事件
+    /*
+    userEmail.onkeydown=function(){
+        var reg=/^[0-9a-zA-Z_.-]+@[0-9a-zA-Z-]+(\.[a-zA-Z]{2,4}){1,2}$/;
+        var val=this.value.replace(/^\s+|\s+$/,"");
+        if(reg.test(val)){
+            this.className=null;
+            spanEmail.className=null;
+            spanEmail.innerHTML="输入正确~";
+        }else{
+            this.className="error";
+            spanEmail.className="error";
+            spanEmail.innerHTML="输入错误~";
+        }
+    }
+    */
+
+
+    //14:592
+</script>
+
+</body>
+</html>

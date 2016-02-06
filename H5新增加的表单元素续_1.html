@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,input{
+            margin: 0;
+            padding: 0;
+            font-family: "\5b8b\4f53", "Arial Narrow";
+            font-size: 20px;
+        }
+        input{
+            outline:none;
+        }
+        .box{
+            margin:20px auto;
+            width: 500px;
+            font-size: 14px;
+        }
+
+        #userEmail{
+            padding: 5px;
+            width:200px;
+            height: 30px;
+            border: 1px solid #2023ff;
+            color:grey;
+        }
+        #userEmail.error{
+            border:1px solid #ff3b22;
+        }
+        #spanEmail{
+            display: inline-block;
+            margin-left: 10px;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            color: #00007F;
+        }
+        #spanEmail.error{
+            color: red;
+        }
+        /*--css中给表单员孙增加了两个伪类:valid(成功)和invalid（失败）
+        在输入内容的时候就随时验证了，但是只能修改当前元素的样式，而修改不了其他的元素
+        */
+        /*
+        #userEmail:valid{
+            border: 1px solid #4affba;
+        }
+        #userEmail:invalid{
+            border:1px solid #ff59be;
+        }
+        */
+    </style>
+</head>
+<body>
+<div class="box">
+    <input type="email" id="userEmail" value="账号/邮箱、电话" />
+    <span id="spanEmail" >你输入的内容出现错误</span>
+    <input type="button" value="提交" id="btn">
+</div>
+<script type="text/javascript">
+    var userEmail=document.getElementById("userEmail");
+    var spanEmail=document.getElementById("spanEmail");
+    var btn=document.getElementById("btn");
+    //第四种方式
+    //this.checkValidity() JS中用这个方法来获取是否符合邮箱的规则，从而进行验证-->对于空内容， 我们验证结果为正确，也就是说这个H5自带，是不支持内容为空验证的
+    /*
+    userEmail.onblur=function(){
+        if(this.checkValidity()){
+            this.className=null;
+            spanEmail.className=null;
+            spanEmail.innerHTML="输入正确~";
+            return true;
+        }
+        this.className="error";
+        spanEmail.className="error";
+        spanEmail.innerHTML="输入错误~";
+        return false;
+    };
+    */
+</script>
+
+</body>
+</html>X
