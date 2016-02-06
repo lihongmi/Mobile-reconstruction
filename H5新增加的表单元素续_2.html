@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>IE6-8兼容性解决</title>
     <style type="text/css">
         body,input{
             margin: 0;
@@ -58,18 +58,46 @@
     </style>
 </head>
 <body>
-<div class="box">
-    <input type="email" id="userEmail" autofocus="true" />
-    <span id="userEmailTip">账号/邮箱/电话</span>
+<div class="box" id="box">
+    <input type="email" id="userEmail" placeholder="账号/邮箱/电话" />
+
 </div>
 <script type="text/javascript">
     var userEmail=document.getElementById("userEmail");
-    var userEmailTip=document.getElementById("userEmailTip");
-    userEmailTip.onclick=function(){
-        console.log(1);
-       // userEmail.autofocus="true";
-        userEmail.focus();//让文本框获取光标
-    };
+    console.log(userEmail.placeholder);
+
+
+    //if(navigator.userAgent.indexOf("MSIE")>=0){
+    console.log("placeholder" in userEmail);
+    //if(!("placeholder" in userEmail)){
+
+    if(/MSIE\S+([6-9]\.0)/.test(navigator.userAgent)){
+        var oBox=document.getElementById("box");
+        var span=document.createElement("span");
+        span.id=userEmailTip;
+        span.innerHTML="账号/邮箱/电话";
+        oBox.appendChild(span);
+
+        //var userEmail=document.getElementById("userEmail");
+        var userEmailTip=document.getElementById("userEmailTip");
+        serEmailTip.onclick=function(){
+            console.log(1);
+            // userEmail.autofocus="true";
+            userEmail.focus();//让文本框获取光标
+        };
+
+       userEmail.onkeydown=userEmail.onkeyup=function(){
+            var val=this.value.replace(/^\s+|\s+$/g,"");
+            if(val===""){
+                userEmailTip.style.display="block";
+            }else{
+                userEmailTip.style.display="none";
+            }
+        };
+    }
+
+
+    u
     //第四种方式
     //this.checkValidity() JS中用这个方法来获取是否符合邮箱的规则，从而进行验证-->对于空内容， 我们验证结果为正确，也就是说这个H5自带，是不支持内容为空验证的
     /*
@@ -87,14 +115,7 @@
      };
      */
     // userEmail.onkeydown=function(){
-    userEmail.onkeyup=function(){
-        var val=this.value.replace(/^\s+|\s+$/g,"");
-        if(val===""){
-            userEmailTip.style.display="block";
-        }else{
-            userEmailTip.style.display="none";
-        }
-     };
+
 </script>
 
 </body>
