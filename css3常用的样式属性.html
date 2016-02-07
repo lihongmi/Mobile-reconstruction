@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,div{
+            margin: 0;
+            padding: 0;
+            font-size: 28px;
+            text-shadow: 2px 10px 3px red;
+        }
+        #div1{
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            border-radius: 10px 20px 30px;
+            /*background: -webkit-linear-gradient(top right,#ff0000,#a9302a,#ff0000);*/
+            background: -webkit-radial-gradient(#ff0000,#FFF38F);
+            background: -moz-radial-gradient(#ff0000,#FFF38F);
+            background: -o-radial-gradient(#ff0000,#FFF38F);
+            background: -ms-radial-gradient(#ff0000,#FFF38F);
+            background: radial-gradient(#ff0000,#FFF38F);
+            box-shadow: inset 5px 5px 20px 2px #1d58ff;
+        }
+    </style>
+</head>
+<body>
+<div id="div1"></div>
+祝愿第七期的同学们毕业后都找。
+<!--
+推荐大家买一本“图解css3（大漠）"--w3cplus
+1、把之前我们项目中常用的样式，浏览器自己实现了，然后提供一个属性供我们使用
+  例如:之前我们想实现盒子的圆角，需要切图定位到四个角上，现在我们只需要使用border-radius来实现即可
+
+  1)border-radius:盒子圆角
+  box-shadow:盒子阴影 inset内阴影（不写默认是外阴影)、x轴偏移的距离、y轴偏移的距离、阴影的模糊度、阴影的模糊半径、阴影的颜色
+  2)text-shadow文字阴影:
+  3)background: gradient():背景颜色的渐变 linear(线性渐变：指定开始的方向，然后按照这个方向实现更多颜色的渐变) radial（放射性渐变：从正中间开始，按照多个颜色值，向周围渐变）
+   4)background-size:设置当前背景图片的尺寸
+   5)rgba:四个值 a只的是透明度
+
+   在PC端使用，想要兼容更多的浏览器，我们需要把常用浏览器的前缀都加上:-webkit-、-moz-、-ms-、-o-,在写一个不加前缀的;
+   在移动端开发中,我们如果只需要处理IOS、安卓的话，写-webkit-和不加前缀的两个即可
+
+2、css3中提供了更加完善快捷的选择器和伪类
+
+
+3、css3中提供了比JS性能更好动画
+4、css3中引入了更多的字体图标
+
+...
+-->
+
+</body>
+</html>
