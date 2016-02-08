@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,div,ul,li{
+            margin: 0;
+            padding: 0;
+            font-size:14px;
+            font-family: Helvetica, Arial, sans-serif;
+            -webkit-user-select: none;
+        }
+        ul,li{
+            list-style: none;
+        }
+        .box{
+            margin: 20px auto;
+            padding: 10px 0 10px 10px;
+            width: 300px;
+            border: 1px solid #26a99a;
+            border-radius: 5px;
+            box-shadow: 1px 1px 10px 1px #5eb95e;
+            /*-----------------*/overflow: hidden;/*-----------------*/
+        }
+        .box li{
+            margin: 0 10px 10px 0;
+            float: left;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            /*background: #ffbc6c;*/
+        }
+        /*nth-child是从1开始，如果你填写的是一个数字n,代表的是第n个*/
+       /* .box li:nth-child(5){
+            background: #5eb95e;
+        }*/
+
+        /*nth-child是从1开始，如果你填写的是一个数字n,代表的是倒数第n个*/
+       /*.box li:nth-last-child(5){
+           background: #1b15de;
+       }*/
+
+       /*even是偶数->2n odd是奇数->2n+1*/
+        /*.box li:nth-child(even){
+            background: #a9302a;
+        }*/
+
+        /*公式:xn是x的倍数 例如：4n就是4的倍数 4n+1就是4的倍数再加1 */
+       /* .box li:nth-child(4n+1){
+            background: wheat;
+        }*/
+
+        .box li:nth-child(5n+1){
+            background: #5eb95e;
+        }
+        .box li:nth-child(5n+2){
+            background: #5f626b;
+        }
+        .box li:nth-child(5n+3){
+            background:yellow;
+        }
+        .box li:nth-child(5n+4){
+            background: #5f626b;
+        }
+        .box li:nth-child(5n){
+            background: #ff7512;
+        }
+
+        #btn{
+            margin: 20px auto;
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            letter-spacing: 5px;
+            border: 1px solid #11c900;
+            cursor: pointer;
+        }
+        /*当我们在移动端开发的过称中，用户手动点击我们的按钮，为了让用户有按下的一个反馈，我们用active来做一个按下状态*/
+        #btn:active{
+            box-shadow: 0 0 10px 2px #a9302a;
+        }
+
+   </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>01</li>
+        <li>02</li>
+        <li>03</li>
+        <li>04</li>
+        <li>05</li>
+        <li>06</li>
+        <li>07</li>
+        <li>08</li>
+        <li>09</li>
+        <li>10</li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+    </ul>
+</div>
+<div id="btn">我是一个按钮</div>
+
+</body>
+</html>

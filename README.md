@@ -1,11 +1,13 @@
 # Mobile-reconstruction
 移动端系列
+移动前端开发之viewport的深入理解http://www.cnblogs.com/2050/p/3877280.html
 前端工程——基础篇 http://web.jobbole.com/83340/<br/>
 H5移动端知识点总结 http://web.jobbole.com/85027/<br/>
 使用Flexible实现手淘H5页面的终端适配 http://web.jobbole.com/84285/<br/>
 理解javascript中的MVC http://web.jobbole.com/84945/<br/>
 【移动前端开发实践】从无到有（统计、请求、MVC、模块化）H5开发须知http://web.jobbole.com/83672/<br/>
 Limu：JavaScript的那些书 http://web.jobbole.com/8087/<br/>
+<hr/>
 2014年终总结——-我的匆匆这一年(面试，毕业季，工作)  http://blog.csdn.net/yisuowushinian/article/details/43131761
 CodePlayer专注于编程开发技术分享   http://www.365mini.com/<br/>
 Github资源收集 http://web.jobbole.com/83366/<br/>

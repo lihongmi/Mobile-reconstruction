@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,div{
+            margin:0;
+            padding: 0;
+        }
+        #box{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -75px 0 0 -75px;
+            /*margin: 150px auto;*/
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            background: -webkit-linear-gradient(top right,#a9302a, #e1ffe9 50%,#330033);
+            background: linear-gradient(top right,#a9302a, #e1ffe9 50%,#330033);
+            -webkit-transition:all 0.5s ease-in-out 0s;
+            transition:all 0.5s ease-in-out 0s ;
+        }
+        /*
+        .rotate{
+            -webkit-transform: rotate(490deg);
+            transform:rotate(490deg)
+        }
+        .rotate2{
+            -webkit-transform: rotate(-490deg);
+            transform:rotate(-490deg)
+        }*/
+
+/*
+
+        #box:hover{
+            /!*-webkit-transform:translate(200px,0);
+            transform:translate(200px,0);*!/
+
+            /!*-webkit-transform: rotate(490deg);
+            transform:rotate(490deg) ;*!/
+
+            -webkit-transform: scale(2.5) skew(45deg);
+            transform:scale(2.5)  skew(45deg) ;
+        }
+*/
+        .move{
+            -webkit-animation:zhufengMove 1s linear 0s infinite;
+            -webkit-animation-fill-mode:both;
+        }
+
+        @-webkit-keyframes zhufengMove {
+            0%{
+                top:50%;
+            }
+            25%{
+                top: 45%;
+                -webkit-transform: rotate(45deg);
+            }
+            50%{
+                top:50%;
+                -webkit-transform: rotate(90deg);
+            }
+            75%{
+                top: 65%;
+                -webkit-transform: rotate(-45deg);
+            }
+            100%{
+                top: 50%;
+                -webkit-transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+<script type="text/javascript">
+    var box=document.getElementById("box");
+    box.onclick=function(){
+        if(this.z===1){
+            this.className="move";
+            this.z=2;
+        }else{
+            this.className="move1";
+            this.z=1;
+        }
+    }
+</script>
+<!--
+1、transition:all(当前元素上所有的部分都跟着一起变动，也是我们最常用使用的)、duration（运动的总时间）、运动方式（linear、ease、ease-in、ease-out、ease-in-out）、运动的延迟时间
+
+2、transform:translate(位移)、rotate(旋转)、scale（缩放）、skew（倾斜）、matrix(矩阵)
+
+3、animation:动画名称、duration（运动的总时间）、运动方式（linear、ease、ease-in、ease-out、ease-in-out）、运动的延迟时间、运动的次数（1、2、...infinite无线次运动）
+
+我们把animation动画又称作“帧”动画:这个动画是需要一帧帧完成，而且我们可以在任意一帧上设置动画的效果--keyframes(需要给当前的动画起一个名字)
+ 格式：
+        @-webkit-keyframes zhufengMove {
+            from{
+
+            }
+            to{
+
+            }
+        }
+
+transition和animation的一个区别，建议大家用animation动画，因为:transition是时时改变元素位置和样式的动画，换句话说是真真实实的样式发生改变了
+animation是浏览器按照设置的帧模拟出来的动画，也就是说你的元素的位置和样式没有发生改变
+如果需要让我们animation动画保留在最后哪一帧的位置
+animation-fill-mode:设置动画完成后保留在哪一帧的位置
+none:默认值 不设置对象动画之外的状态
+forwards:设置对象状态为动画结束时的状态
+backwards:设置对象状态为动画开始时的状态
+both:设置对象状态为动画结束或开始的状态
+
+http://daneden.github.io/animate.css/?    animate.css常用的动画库
+比如：
+在link引入animate.css中就可以了
+<div id="animate xxxx"></div>
+
+css3动画简介以及动画库animate.css的使用 http://www.cnblogs.com/2050/p/3409129.html
+animate.css – 齐全的CSS3动画库
+http://www.dowebok.com/98.html
+http://www.dowebok.com/code
+
+http://www.css88.com/archives/4336
+
+
+
+-->
+</body>
+</html>
