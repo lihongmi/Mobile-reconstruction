@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5当中的音频和视频</title>
+    <style type="text/css">
+        body,div,audio{
+            margin:0;
+            padding: 0;
+            font-family: "\5FAE\8F6F\96C5\9ED1", Helvetica, sans-serif;
+            font-size: 14px;
+            -webkit-user-select: none;
+        }
+        #audio1{
+            display: none;
+        }
+        #btn{
+            display: none;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 30px;
+            height: 30px;
+            background: -webkit-radial-gradient(#11c900,#ffcf78);
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .move{
+            -webkit-animation: mm 1s linear 0s infinite;
+        }
+        @-webkit-keyframes mm {
+            0%,100%{
+                box-shadow: 0 0 0 0 yellow;
+            }
+            50%{
+                box-shadow: 0 0 20px 1px #a9302a;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--<audio src=""/>-->
+<div id="btn"></div>
+
+<audio id="audio1" src="李锋-我的简历.mp3" preload="none" loop/>
+<script type="text/javascript">
+    window.onload=function(){
+        var oAudio=document.querySelector("#audio1");
+        var oBtn=document.querySelector("#btn");
+
+
+        //canplay:监听音频文件是否可以播放（资源文件己经部分加载完成，但是播放过程中可能会出现卡顿）
+        // canplaythrough:监听音频文件是否可以播放（资源己经加载完成，播放过程中不会出现卡顿）
+
+        oAudio.addEventListener("canplay",function(){
+            oBtn.style.display="block";
+            oBtn.className="move";
+        },false);
+        oAudio.play();//当前的音频文件播放
+
+        oBtn.onClick=function(){
+            if(oAudio.paused){//当前的音频文件处于暂停状态
+                window.location.href=window.location.href;
+
+                oAudio.play();
+                this.className="move";
+            }else{
+                oAudio.pause();
+                this.className=null;
+            }
+        }
+    }
+
+
+</script>
+
+
+<!--<audio id="audio1">
+    <source src="刘珂-告别昨天.mp3" type="audio/mpeg"/>
+    <source src="刘珂-告别昨天.ogg" type="audio/ogg"/>
+    <source src="刘珂-告别昨天.wav" type="audio/wav"/>
+    Your Browser is not support audio~~
+    <embed>use flash replace our audio</embed>
+</audio>-->
+<!--
+    audio:音频标签(mp3、ogg、wav)
+    1)controls：是否使用自带的音频播放器
+    2)autplay:是否自动播放
+    3)loop:播放完成后是否循环重新播放
+    4)preload:auto(进入页面后立即加载音频文件)、none(进入页面不加载音频文件，只有播放的时候才开始加载)、metadata(进入页面首先把音频文件的头信息进行加载，主体音乐部分在播放的时候在加载)
+
+    为了不影响页面开始加载的速度，我们默认给其preload设置为none
+
+    video:视频标签(mp4、webM、ogg)
+    和audio一样存在上述的知识
+    5）width/height:设置观看屏幕的宽度和高度
+    6）poster:在没有观看之前，给我们的视频文件设置封面图  但是必须设置：preload=none
+
+-->
+</body>
+</html>
