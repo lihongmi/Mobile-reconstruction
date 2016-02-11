@@ -16,7 +16,7 @@ H5移动端知识点总结 http://web.jobbole.com/85027/<br/>
 pageResponse - 让H5适配移动设备全家(移动端适配) http://www.cnblogs.com/PeunZhang/p/4517864.html<br/>
 H5精选项目 http://www.digitaling.com/projects/weekly<br/>
 <hr/>
-2014年终总结——-我的匆匆这一年(面试，毕业季，工作)  http://blog.csdn.net/yisuowushinian/article/details/43131761
+2014年终总结——-我的匆匆这一年(面试，毕业季，工作)  http://blog.csdn.net/yisuowushinian/article/details/43131761<br/>
 Limu：JavaScript的那些书 http://web.jobbole.com/8087/<br/>
 <hr/>
 ****CodePlayer专注于编程开发技术分享   http://www.365mini.com/<br/>
