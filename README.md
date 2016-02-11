@@ -19,9 +19,9 @@ H5精选项目 http://www.digitaling.com/projects/weekly<br/>
 2014年终总结——-我的匆匆这一年(面试，毕业季，工作)  http://blog.csdn.net/yisuowushinian/article/details/43131761<br/>
 Limu：JavaScript的那些书 http://web.jobbole.com/8087/<br/>
 <hr/>
-****CodePlayer专注于编程开发技术分享   http://www.365mini.com/<br/>
-****Github资源收集 http://web.jobbole.com/83366/<br/>
-****伯乐在线 http://web.jobbole.com/<br/>
+<h4>CodePlayer专注于编程开发技术分享</h4>   http://www.365mini.com/<br/>
+<h4>Github资源收集</h4> http://web.jobbole.com/83366/<br/>
+<h4>伯乐在线</h4> http://web.jobbole.com/<br/>
 <hr/>
 
 BAT及各大互联网公司2014前端笔试面试题–JavaScript篇 http://web.jobbole.com/78738 <br/>
