@@ -7,6 +7,7 @@ H5移动端知识点总结 http://web.jobbole.com/85027/<br/>
 移动前端开发之viewport的深入理解http://www.cnblogs.com/2050/p/3877280.html<br/>
 TouchEvent  https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent<br/>
 前端工程——基础篇 http://web.jobbole.com/83340/<br/>
+zhiqiang21/blog  https://github.com/zhiqiang21/blog<br/>
 
 <hr/>
 理解javascript中的MVC http://web.jobbole.com/84945/<br/>
