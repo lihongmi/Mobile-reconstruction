@@ -102,7 +102,7 @@ a, img {
 -webkit-touch-callout: none;
 }
 
-十：CSS 截断字符串
+十一：CSS 截断字符串
   单行截断字符串,这里必须指定字符串的宽度
   {
       /*指定字符串的宽度*/
@@ -113,7 +113,7 @@ a, img {
       white-space: nowrap;
   }
 
-十一：calc基本语法：
+十二：calc基本语法：
    .class {width: calc(expression);}
    它可以支持加，减，乘，除; 在我们做手机端的时候非常有用的一个知识点;
    calc好用的地方就是，可以在任何单位之间进行换算。但是浏览器支持的不是很好。
