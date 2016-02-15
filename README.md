@@ -12,6 +12,8 @@ zhiqiang21/blog  https://github.com/zhiqiang21/blog<br/>
 前端开发面试题大收集 https://github.com/paddingme/Front-end-Web-Development-Interview-Question<br/>
 常用代码收集资源分享 https://github.com/zhufengzhang/src<br/>
 <hr/>
+【从0到1学Web前端】CSS定位问题三(相对定位,绝对定位) http://blog.csdn.net/yisuowushinian/article/details/46038423#t4<br/>
+<hr/>
 <h3>前端面试题</h3>
 最全前端面试问题及答案总结(一) http://www.aweb.cc/article/detail/id/287.html<br/>
 最全前端面试问题及答案总结(二) http://www.aweb.cc/article/detail/id/288.html<br/>

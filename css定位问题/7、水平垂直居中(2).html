@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body,div{
+            margin: 0;
+            padding: 0;
+            background: yellow;
+        }
+        /*未知高度和宽度的水平垂直居中*/
+        #body-div{
+            padding: 15px;
+            background-color: #a0c8ff;
+            border: 1px solid #000000;
+
+            position: relative;
+        }
+        #body-div div{
+            padding: 10px;
+            background-color: orangered;
+            border: 1px solid white;
+
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+
+        }
+    </style>
+</head>
+<body>
+<div id="body-div">
+
+    <div class="item3">box_3</div>
+</div>
+
+</body>
+</html>

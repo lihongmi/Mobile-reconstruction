@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body{
+            margin: 20px;
+            background: yellow;
+        }
+        #body-div{
+            padding: 15px;
+            background-color: #a0c8ff;
+            border: 1px solid #000000;
+            /*那么当我们把直接父级元素设置为已定位的元素会怎么样呢？*/
+            position: relative;
+        }
+        #body-div div{
+            padding: 10px;
+            background-color: orangered;
+            border: 1px solid white;
+        }
+        .item2{
+            position: absolute;
+            top:10px;
+            right: 10px;
+        }
+        /*这个时候Box-3的位置会占据之前Box-2的位置。且Box-2和Box-3的左边框会重合。且盒子的宽度会根据盒子内部的元素自适应。*/
+        /*当盒子设置了绝对定位但是没有使用top right bottom left设置盒子的偏移量的时候，它仍会占据原先的位置。*/
+       /* 由上可以得出两个结论：
+        1.使用绝对定位的盒子以它的“最近”的一个“已经定位”的“祖先元素”为基准进行偏移（定位）。如果没有已经定位的祖先元素，那么就会以浏览器窗口为基准进行定位。
+        2.决对定位的框从标准流中脱离，这意味着它们对其后的兄弟盒子的定位没有影响。其它的盒子好像就当这个盒子（绝对定位的盒子）不存在一样。*/
+    </style>
+</head>
+<body>
+<div id="body-div">
+    <div class="item1">box_1</div>
+    <div class="item2">box_2</div>
+    <div class="item3">box_3</div>
+</div>
+
+</body>
+</html>

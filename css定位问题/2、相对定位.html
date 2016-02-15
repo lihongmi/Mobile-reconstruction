@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        .item1,.item2,.item3{
+            width: 300px;
+            height: 100px;
+            background-color: #123456;
+            margin: 20px;
+        }
+        .item2{
+            position: relative;
+            top:40px;
+            left: 40px;
+            /*margin:40px 0 0 40px;*/
+            /*到这里可以验证当使用top right bottom left （这四个属性可以设置具体的像素数也可以设置百分比）这样属性改变元素的位置的时候，不会影响其他元素的位置。而使用margin 这样的属性改变元素的位置会影响其他元素的位置。*/
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="item1">item1</div>
+    <div class="item2">item2</div>
+    <div class="item3">item3</div>
+</div>
+
+</body>
+</html>

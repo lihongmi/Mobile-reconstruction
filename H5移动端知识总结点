@@ -1,4 +1,30 @@
-三、meta基础知识点：
+一：使用rem作为单位
+html { font-size: 100px; }
+@media(min-width: 320px) { html { font-size: 100px; } }
+@media(min-width: 360px) { html { font-size: 112.5px; } }
+@media(min-width: 400px) { html { font-size: 125px; } }
+@media(min-width: 640px) { html { font-size: 200px; } }
+给手机设置100px的字体大小; 对于320px的手机匹配是100px，
+其他手机都是等比例匹配; 因此设计稿上是多少像素的话，那么转换为rem的时候，rem = 设计稿的像素/100 即可;
+
+二：去掉 a，input 在移动端浏览器中的默认样式
+1.禁止 a 标签背景
+在移动端使用 a标签做按钮的时候，点按会出现一个“暗色”的背景，去掉该背景的方法如下
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+
+2.禁止长按 a，img 标签长按出现菜单栏
+使用 a标签的时候，移动端长按会出现一个 菜单栏，这个时候禁止呼出菜单栏的方法如下：
+a, img {
+    -webkit-touch-callout: none; /*禁止长按链接与图片弹出菜单*/
+}
+
+3.流畅滚动
+body{
+    -webkit-overflow-scrolling:touch;
+}
+
+三：meta基础知识点：
 1.页面窗口自动调整到设备宽度，并禁止用户及缩放页面（移动端开发视窗口的添加）。
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0" />
 属性基本含义：
@@ -72,7 +98,45 @@ input,textarea {
 }
 
 十：在IOS中 禁止长按链接与图片弹出菜单
-
 a, img {
 -webkit-touch-callout: none;
 }
+
+十：CSS 截断字符串
+  单行截断字符串,这里必须指定字符串的宽度
+  {
+      /*指定字符串的宽度*/
+      width:300px;
+      overflow: hidden;
+      /* 当字符串超过规定长度，显示省略符*/
+      text-overflow:ellipsis;
+      white-space: nowrap;
+  }
+
+十一：calc基本语法：
+   .class {width: calc(expression);}
+   它可以支持加，减，乘，除; 在我们做手机端的时候非常有用的一个知识点;
+   calc好用的地方就是，可以在任何单位之间进行换算。但是浏览器支持的不是很好。
+   而且在使用的时候要加上厂商前缀，达到兼容性。不过现在不推荐使用，毕竟，浏览器支持有限。
+   优点如下：
+   1. 支持使用 “+”,”-”,”*” 和 “/” 四则运算。
+   2. 可以混合使用百分比(%),px,em,rem等作为单位可进行计算。
+   浏览器的兼容性有如下：
+   IE9+，FF4.0+，Chrome19+，Safari6+
+   如下测试代码：
+   .calc{
+       margin-left:50px;
+       padding-left:2rem;
+       width:calc(100%-50px-2rem);
+       height:10rem;
+   }
+
+   #formbox {
+     width:  130px;
+     /*加厂商前缀，操作符（+，-，*，/）两边要有空格）*/
+     width:  -moz-calc(100% / 6);
+     width:  -webkit-calc(100% / 6);
+     width:  calc(100% / 6);
+     border: 1px solid black;
+     padding: 4px;
+   }
