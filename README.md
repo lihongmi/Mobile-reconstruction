@@ -8,7 +8,19 @@ H5移动端知识点总结 http://web.jobbole.com/85027/<br/>
 TouchEvent  https://developer.mozilla.org/en-US/docs/Web/API/TouchEvent<br/>
 前端工程——基础篇 http://web.jobbole.com/83340/<br/>
 zhiqiang21/blog  https://github.com/zhiqiang21/blog<br/>
-
+结合个人经历总结的前端入门方法 https://github.com/qiu-deqing/FE-learning<br/>
+前端开发面试题大收集 https://github.com/paddingme/Front-end-Web-Development-Interview-Question<br/>
+常用代码收集资源分享 https://github.com/zhufengzhang/src<br/>
+<hr/>
+<h3>前端面试题</h3>
+最全前端面试问题及答案总结(一) http://www.aweb.cc/article/detail/id/287.html<br/>
+最全前端面试问题及答案总结(二) http://www.aweb.cc/article/detail/id/288.html<br/>
+最全前端面试题及答案总结(三) http://www.aweb.cc/article/detail/id/289.html<br/>
+最全前端面试题及答案总结(四) http://www.aweb.cc/article/detail/id/290.html<br/>
+前端开发面试题 https://github.com/markyun/My-blog/tree/master/Front-end-Developer-Questions<br/>
+前端涉及的所有知识体系  https://segmentfault.com/a/1190000004070468<br/>
+史上最全 前端开发面试问题及答案整理 https://github.com/zhufengzhang/Front-end-Interview-questions<br/>
+收集的前端面试题和答案 https://github.com/zhufengzhang/FE-interview<br/>
 <hr/>
 理解javascript中的MVC http://web.jobbole.com/84945/<br/>
 【移动前端开发实践】从无到有（统计、请求、MVC、模块化）H5开发须知http://web.jobbole.com/83672/<br/>

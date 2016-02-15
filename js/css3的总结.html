@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    /*************************************************************
+     * 需要通过用户的行为:hover\:focus\:active\:checked\javascript触发一个元素
+     * css3过渡transition
+     * *理解：transition实现属性值的开始值与属性值的结束值之间平缓过渡的动画
+     * *步骤：
+     * **1）在默认样式中声明元素的初始化样式
+     * **2）声明过渡元素最终状态样式，比如悬浮状态
+     * **3）在默认样式中通过添加过渡函数，添加一些不同的样式
+     * *语法：
+     * **property  过渡属性
+     * **duration  所需时间
+     * **timing-function  动画函数  （animation type）
+     * **delay  延迟时间
+     */
+
+    /*************************************************************
+     * css3动画animation
+     * *理解：像Flash制作动画，通过关帧帧控制动画的每一步，实现更为复杂的动画效果，要知道transition和animation都是通过改变元素的属性值来实现动画效果,通过@keyframes构建一些transition的动画效果（@keyframes叫做关键帧）
+     * *语法：
+     * **name  指定一个关键帧动画的名字
+     * **duration       设置动画播放所需的时间 单位：秒
+     * **timing-function    指定动画的播放方式
+     * **delay             指定动画开始时间  单位：秒
+     * **iteration-count  指定动画播放的循环次数 number  infinite
+     * **direction   指定动画的播放方向 normal  alternate
+     * **play-state  控制动画的播放状态  running paused
+     * **fill-mode   设置动画的时间外属性 none forwards backwards both
+     * *格式：@-webkit-keyframes 动画名称 {
+            from{
+
+            }
+            to{
+
+            }
+        }
+     * transition和animation的区别：
+     * **使用transition属性只能通过指定属性的初始化状态和结束状态，然后在两个状态之间进行平滑过渡的方式来实现动画
+     * **使用animation实现动画效果主要由两个部分组成：
+     * ***1）通过类似Flash动画中的关键帧来声明一个动画；
+     * ***2）在animation属性中调用关键帧声明的动画，从而实现一个更为复杂的动画效果；
+     */
+
+</script>
+
+</body>
+</html>
