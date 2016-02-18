@@ -48,3 +48,8 @@ BAT及各大互联网公司2014前端笔试面试题–JavaScript篇 http://web.
 BAT及各大互联网公司2014前端笔试面试题–Html,Css篇 http://web.jobbole.com/78740/ <br/>
 另外：<br/>
 扇贝访谈：全扇贝网打卡天数第一的奇男子Chain  http://www.shanbay.com/footprints/article/184/<br/>
+
+<hr/>
+天涯孤凡分享的百度云盘资源 http://www.panduoduo.net/u/bd-1694891763<br/>
+看前端  http://www.kanqianduan.com/archives/461<br/>
+<hr/>
